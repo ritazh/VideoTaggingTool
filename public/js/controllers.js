@@ -222,7 +222,7 @@ videoTaggingAppControllers
                         return video.Id == videoId
                     });
                     $scope.selectedVideo = selectedVideoArr.length && selectedVideoArr[0];
-                    $scope.description = $scope.selectedVideo ? 'new job for video ' + $scope.selectedVideo.Name : 'new job';
+                    $scope.description = $scope.selectedVideo ? 'new job for video/image ' + $scope.selectedVideo.Name : 'new job';
             }
         });
 
@@ -237,7 +237,7 @@ videoTaggingAppControllers
             
             $scope.clearMessages();
 
-            if(!$scope.selectedVideo || !$scope.selectedVideo.Id) return $scope.showError('video was not provided');
+            if(!$scope.selectedVideo || !$scope.selectedVideo.Id) return $scope.showError('video/image was not provided');
             if(!$scope.selectedUser || !$scope.selectedUser.Id) return $scope.showError('user was not provided');
             if(!$scope.description) return $scope.showError('description was not provided');
             if(!$scope.selectedStatus || !$scope.selectedStatus.Id) return $scope.showError('status was not provided');
